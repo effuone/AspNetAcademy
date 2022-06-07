@@ -1,0 +1,24 @@
+@model IEnumerable<Book>
+@{
+
+}
+
+<div>
+    <h3>Books</h3>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Author</td>
+            <td>Price</td>
+        </tr>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Name</td>
+                <td>@book.Author</td>
+                <td>@book.Price</td>
+                <td><a href="~/Book/Buy/@book.Id">Buy</a></td>
+            </tr>
+        }
+    </table>
+</div>
